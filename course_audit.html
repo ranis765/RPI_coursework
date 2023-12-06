@@ -24,7 +24,9 @@
 							</div>
 						</div>
 					</a>
-
+					<div class="header__burger">
+						<span></span>
+					  </div>
 					<div class="header__nav">
 						<ul>
 							<li><a href="./course_audit.html">Аудит курса</a></li>
@@ -60,6 +62,15 @@
 							В результате вы получите
 							<br>excel-файл, в котором будут описаны
 							<br>слабые стороны курса и точки роста
+						</div>
+						<div class="intro__form">
+
+							<button class="intro__btn-submit button --md --bg-gold --round"id="button-callback">
+								<div class="button__text">Оставить заявку</div>
+							</button>
+							<div class="intro__policy">*Нажимая на кнопку, Вы даете согласие
+								<br>на обработку своих персональных данных
+							</div>
 						</div>
 
 					</div>
@@ -128,11 +139,13 @@
 				</div>
 				<a class="audit__btn-search button --lg --bg-black --round" href="javascript:;" data-src="#modal-audit"
 					data-fancybox="">
-					<div class="button__text">Найдите своих коллег, которые заказывали аудит</div>
+					<div class="button__text" id="auditbutton">Найдите своих коллег, которые заказывали аудит</div>
 					<div class="button__icon"><img src="./img/magniffic-glass-bold.svg"></div>
 				</a>
 			</div>
 		</div>
+		
+		
 
 		<div class="audit_price">
 			<div class="case">
@@ -294,13 +307,49 @@
 
 		<div class="reviews" id="reviews">
 			<div class="case">
-				<div class="reviews__title"><strong>отзывы</strong> О НАШЕЙ РАБОТЕ</div>
-				<div class="reviews__slider">
+				<div class="reviews__title">
+					<strong>отзывы
 
+					</strong> О НАШЕЙ РАБОТЕ
+				</div>
+				<div class="container">
+
+					<div class="carousel">
+						<div class="carousel-window">
+							<div class="carousel-slides">
+								<div class="carousel-item">
+									<img src="https://img.youtube.com/vi/vnuAiXCvTN0/sddefault.jpg" alt="">
+								</div>
+								<div class="carousel-item">
+									<img src="https://img.youtube.com/vi/Z5GK0o7bCC4/sddefault.jpg" alt="">
+								</div>
+								<div class="carousel-item">
+									<img src="https://img.youtube.com/vi/9Oze9tB6Zq0/sddefault.jpg" alt="">
+								</div>
+								<div class="carousel-item">
+									<img src="https://img.youtube.com/vi/WM-aDc8SZsc/sddefault.jpg" alt="">
+								</div>
+								<div class="carousel-item">
+									<img src="https://img.youtube.com/vi/obayDd3dUXo/sddefault.jpg" alt="">
+								</div>
+								<div class="carousel-item">
+									<img src="https://img.youtube.com/vi/BXoHQ961Idc/sddefault.jpg" alt="">
+								</div>
+								<div class="carousel-item">
+									<img src="https://img.youtube.com/vi/9N3ybZLsqK4/sddefault.jpg" alt="">
+								</div>
+							</div>
+						</div>
+						<a href="#" class="carousel-prev">
+							<span class="carousel-prev-icon">&lt;</span>
+						</a>
+						<a href="#" class="carousel-next">
+							<span class="carousel-next-icon">&gt;</span>
+						</a>
+					</div>
 				</div>
 			</div>
 		</div>
-
 
 		<div class="order">
 			<div class="case">
@@ -309,11 +358,7 @@
 					<div class="order__subtitle">На консультации обсудим ваши задачи и подробно расскажем о технологии
 						нашей работы</div>
 					<form class="order__form">
-						<div class="order__field field --lgg --b-white --round --phone --required">
-							<div class="field__wrap">
-								<input class="field__area" type="tel" name="phone" placeholder="Номер Телефона">
-							</div>
-						</div>
+
 						<button class="order__btn button --lgg --bg-gold --round">
 							<div class="button__text">Оставить заявку</div>
 						</button>
@@ -352,8 +397,146 @@
 				</div>
 			</div>
 		</footer>
-	</div>
 
+		<div id="myModal" class="modal">
+
+			<!-- Модальное содержание -->
+			<div class="modal-content">
+				<div class="modal__close">
+					<svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<rect x="31.8506" width="9.1494" height="45.0432" transform="rotate(45 31.8506 0)"
+							fill="#D6D6D6"></rect>
+						<rect width="9.1494" height="45.0432"
+							transform="matrix(-0.707107 0.707107 0.707107 0.707107 6.979 0.157227)" fill="#D6D6D6">
+						</rect>
+					</svg>
+				</div>
+
+
+				<div class="modal__title">Курсы, для которых провели аудит</div>
+				<div class="modal__audit adt">
+					<div class="adt__list">
+						<div class="adt__item">
+							<div class="adt__img"><img src="https://kursmaster.ru/uploads/adt-1.png" alt=""></div>
+							<div class="adt__name">Курс «Скорость» Аяза Шабутдинова
+								<br>(Like Центр)
+							</div>
+						</div>
+						<div class="adt__item">
+							<div class="adt__img"><img src="https://kursmaster.ru/uploads/adt-2.png" alt=""></div>
+							<div class="adt__name">Курс «Основы флористического мастерства»
+								<br>Елены Поповой
+							</div>
+						</div>
+						<div class="adt__item">
+							<div class="adt__img"><img src="https://kursmaster.ru/uploads/adt-3.png" alt=""></div>
+							<div class="adt__name">Курс «RED SMM» Дмитрия Кудряшова</div>
+						</div>
+						<div class="adt__item">
+							<div class="adt__img"><img src="https://kursmaster.ru/uploads/adt-4.png" alt=""></div>
+							<div class="adt__name">Курс «Пять шагов в инвесторы»
+								<br>Виктории Шергиной
+							</div>
+						</div>
+						<div class="adt__item">
+							<div class="adt__img"><img src="https://kursmaster.ru/uploads/adt-5.png" alt=""></div>
+							<div class="adt__name">Онлайн-школа «Комплексной бизнес-нумерологии»
+								<br>Азалии Автономовой
+							</div>
+						</div>
+						<div class="adt__item">
+							<div class="adt__img"><img src="https://kursmaster.ru/uploads/adt-6.png" alt=""></div>
+							<div class="adt__name">Курс «Сила личных продаж» Максима Шаргородского</div>
+						</div>
+						<div class="adt__item">
+							<div class="adt__img"><img src="https://kursmaster.ru/uploads/adt-7.png" alt=""></div>
+							<div class="adt__name">Курс «Волосы мечты» Анастасии Смирновой</div>
+						</div>
+						<div class="adt__item">
+							<div class="adt__img"><img src="https://kursmaster.ru/uploads/adt-8.png" alt=""></div>
+							<div class="adt__name">Фитнес-школа Яны Логвиной</div>
+						</div>
+						<div class="adt__item">
+							<div class="adt__img"><img src="https://kursmaster.ru/uploads/adt-9.png" alt=""></div>
+							<div class="adt__name">Курс «Волшебный лес» Юлии Гринер</div>
+						</div>
+						<div class="adt__item">
+							<div class="adt__img"><img src="https://kursmaster.ru/uploads/adt-10.png" alt=""></div>
+							<div class="adt__name">Школа «Я - инструктор» Ангелины Фрейман</div>
+						</div>
+						<div class="adt__item">
+							<div class="adt__img"><img src="https://kursmaster.ru/uploads/adt-11.png" alt=""></div>
+							<div class="adt__name">Онлайн-школа «Всем читать»
+								<br>Татьяны Смышляевой
+							</div>
+						</div>
+						<div class="adt__item">
+							<div class="adt__img"><img src="https://kursmaster.ru/uploads/adt-12.png" alt=""></div>
+							<div class="adt__name">Курс «Банкротство от теории к практике»
+								<br>Альбины Гузаировой
+							</div>
+						</div>
+						<div class="adt__item">
+							<div class="adt__img"><img src="https://kursmaster.ru/uploads/adt-13.png" alt=""></div>
+							<div class="adt__name">Онлайн-школа «Игра на равных» Марии Батти</div>
+						</div>
+						<div class="adt__item">
+							<div class="adt__img"><img src="https://kursmaster.ru/uploads/adt-14.png" alt=""></div>
+							<div class="adt__name">«Школа таргетолога» Натальи Франсис</div>
+						</div>
+						<div class="adt__item">
+							<div class="adt__img"><img src="https://kursmaster.ru/uploads/adt-15.png" alt=""></div>
+							<div class="adt__name">Курс «Мама, я smmщик» Камиллы Жибуля</div>
+						</div>
+						<div class="adt__item">
+							<div class="adt__img"><img src="https://kursmaster.ru/uploads/adt-16.png" alt=""></div>
+							<div class="adt__name">«Школа Proteddy» Ольги Архиповой</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="modal-callback" class="modal">
+
+				<!-- Модальное содержание -->
+				<div class="modal-content">
+					<div class="modal__close">
+						<svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<rect x="31.8506" width="9.1494" height="45.0432" transform="rotate(45 31.8506 0)"
+								fill="#D6D6D6"></rect>
+							<rect width="9.1494" height="45.0432"
+								transform="matrix(-0.707107 0.707107 0.707107 0.707107 6.979 0.157227)" fill="#D6D6D6">
+							</rect>
+						</svg>
+					</div>
+					<div class="modal__title">Заказать обратный звонок</div>
+					<div class="modal__form">
+						<div class="modal__field field --md --b-gray --round --phone --required">
+							<div class="field__wrap">
+								<input class="field__area" type="tel" name="phone" placeholder="Номер телефона">
+								<input class="field__area" type="tel" name="phone" placeholder="Номер телефона">
+							</div>
+						</div>
+						<button class="modal__btn button --md --bg-gold --round">
+							<div class="button__text">Оставить заявку</div>
+						</button>
+						<div class="modal__policy">*Нажимая на кнопку, Вы даете согласие
+							<br>на обработку своих персональных данных
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	<script src="https://code.jquery.com/jquery-3.6.3.min.js" crossorigin="anonymous"></script>
+	<script src="./js/main.js"></script>
+	<script src="./js/slider.js"></script>
+	<script src="./js/modal.js"></script>
+	<script src="./js/modal2.js"></script>
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			new Slider(document.querySelector('.carousel'));
+		});
+	</script>
 </body>
 
 </html>

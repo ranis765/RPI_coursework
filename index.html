@@ -24,14 +24,16 @@
 							</div>
 						</div>
 					</a>
-
-					<div class="header__nav">
-						<ul>
+					<div class="header__burger">
+						<span></span>
+					</div>
+					<nav class="header__nav">
+						<ul class="header-menu__list">
 							<li><a href="./course_audit.html">Аудит курса</a></li>
-							<li><a href="">Доработка курса</a></li>
+							<li><a href="" >Доработка курса</a></li>
 							<li><a href="./course_development.html">Разработка курса с нуля</a></li>
 						</ul>
-					</div>
+					</nav>
 					<div class="header__socials socials">
 						<div class="socials__list row">
 							<a class="socials__item">
@@ -49,7 +51,7 @@
 			</div>
 		</header>
 
-
+		
 
 		<main class="main">
 			<div class="intro">
@@ -60,19 +62,15 @@
 								<br>СТУДЕНТЫ ПРОХОДЯТ
 								<br>ДО КОНЦА И РЕКОМЕНДУЮТ
 							</div>
-							<form class="intro__form">
-								<div class="intro__field field --md --b-gray --round --phone --required">
-									<div class="field__wrap">
-										<input class="field__area" type="tel" name="phone" placeholder="Номер телефона">
-									</div>
-								</div>
-								<button class="intro__btn-submit button --md --bg-gold --round">
+							<button id="qwe"></button>
+							<div class="intro__form">
+								<button class="intro__btn-submit button --md --bg-gold --round" id="button-callback">
 									<div class="button__text">Оставить заявку</div>
 								</button>
 								<div class="intro__policy">*Нажимая на кнопку, Вы даете согласие
 									<br>на обработку своих персональных данных
 								</div>
-							</form>
+							</div>
 							<div class="intro__clients clients">
 								<div class="clients__title">Наши клиенты:</div>
 								<div class="clients__list row">
@@ -153,19 +151,15 @@
 						<div class="order__title h3">Оставить заявку на консультацию</div>
 						<div class="order__subtitle">На консультации обсудим ваши задачи и подробно расскажем о
 							технологии нашей работы</div>
-						<form class="order__form">
-							<div class="order__field field --lgg --b-white --round --phone --required">
-								<div class="field__wrap">
-									<input class="field__area" type="tel" name="phone" placeholder="Номер Телефона">
-								</div>
-							</div>
-							<button class="order__btn button --lgg --bg-gold --round">
-								<div class="button__text">Оставить заявку</div>
+						<div class="order__form">
+
+							<button class="order__btn button --lgg --bg-gold --round"id="button-callback" >
+								<div class="button__text" >Оставить заявку</div>
 							</button>
 							<div class="order__policy">*Нажимая на кнопку, Вы даете согласие
 								<br>на обработку своих персональных данных
 							</div>
-						</form>
+						</div>
 					</div>
 				</div>
 				<div class="order__bg"><img src="./img/animation.gif" alt=""></div>
@@ -199,8 +193,45 @@
 				</div>
 			</div>
 		</footer>
+		<div id="modal-callback" class="modal">
+
+			<!-- Модальное содержание -->
+			<div class="modal-content">
+				<div class="modal__close">
+					<svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<rect x="31.8506" width="9.1494" height="45.0432" transform="rotate(45 31.8506 0)"
+							fill="#D6D6D6"></rect>
+						<rect width="9.1494" height="45.0432"
+							transform="matrix(-0.707107 0.707107 0.707107 0.707107 6.979 0.157227)" fill="#D6D6D6">
+						</rect>
+					</svg>
+				</div>
+				<div class="modal__title">Записаться<br> на консультацию</div>
+				<div class="modal__form">
+					<div class="modal__field field --md --b-gray --round --phone --required">
+						<div class="field__wrap">
+							
+							<input class="field__area" type="tel" name="phone" placeholder="Имя" id="name">
+							<input class="field__area" type="tel" name="phone" placeholder="Номер телефона" id="tel-number" pattern = "7-[0-9]{3}-[0-9]{3}-[0-9]{4}">
+							<input class="field__area" type="tel" name="phone" placeholder="Комментарий" id="comment">
+							
+						</div>
+					</div>
+					<button class="modal__btn button --md --bg-gold --round" id="contact">
+						<div class="button__text">Оставить заявку</div>
+					</button>
+					<div class="modal__policy">*Нажимая на кнопку, Вы даете согласие
+						<br>на обработку своих персональных данных
+					</div>
+				</div>
+			</div>
+		</div>
 
 
 	</div>
-
+	<script src="./js/modal2.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.3.min.js" crossorigin="anonymous"></script>
+	<script src="./js/main.js"></script>
 </body>
+
+</html>
