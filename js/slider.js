@@ -21,26 +21,16 @@ class Slider {
 
     init() {
         this.dotButtons = this.dots(); // создать индикатор текущего кадра
-
-        // все кадры должны быть одной ширины, равной ширине окна просмотра;
-        // если кадров три, то ширина каждого кадра будет 100/3 = 33.33333%
-        // от ширины контейнера .carousel-slides, то есть 900 пикселей
         this.allFrames.forEach(frame => frame.style.width = 100/this.length + '%');
-        // ширина цепочки кадров должна равна ширине всех кадров, то есть
-        // 900*3 = 2700 пикселей; но удобнее задать в процентах от родителя,
-        // если кадров три, то ширина контейнера кадров будет 100*3 = 300%
         this.frameChain.style.width = 100 * this.length + '%';
-
         this.nextButton.addEventListener('click', event => { // клик по кнопке «вперед»
             event.preventDefault();
             this.next();
         });
-
         this.prevButton.addEventListener('click', event => { // клик по кнопке «назад»
             event.preventDefault();
             this.prev();
         });
-
         // клики по кнопкам индикатора текущего кадра
         this.dotButtons.forEach(dot => {
             dot.addEventListener('click', event => {
@@ -50,7 +40,6 @@ class Slider {
                 this.goto(index);
             });
         });
-
         if (this.autoplay) { // включить автоматическую прокрутку?
             this.play();
             // когда мышь над слайдером — останавливаем автоматическую прокрутку
@@ -59,7 +48,6 @@ class Slider {
             this.slider.addEventListener('mouseleave', () => this.play());
         }
     }
-
     // перейти к кадру с индексом index
     goto(index) {
         // изменить текущий индекс...
@@ -73,17 +61,14 @@ class Slider {
         // ...и выполнить смещение
         this.move();
     }
-
     // перейти к следующему кадру
     next() {
         this.goto(this.index + 1);
     }
-
     // перейти к предыдущему кадру
     prev() {
         this.goto(this.index - 1);
     }
-
     // рассчитать и выполнить смещение
     move() {
         // на сколько нужно сместить, чтобы нужный кадр попал в окно
@@ -92,12 +77,10 @@ class Slider {
         this.dotButtons.forEach(dot => dot.classList.remove('active'));
         this.dotButtons[this.index].classList.add('active');
     }
-
     // запустить автоматическую прокрутку
     play() {
         this.paused = setInterval(() => this.next(), 3000);
     }
-
     // создать индикатор текущего слайда
     dots() {
         const ol = document.createElement('ol');

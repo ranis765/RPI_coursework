@@ -4,3 +4,6 @@ $(document).ready(function() {
 	  $('body').toggleClass('lock'); /*тоже самое с тегом Body*/
 	});
   });
+
+
+  

@@ -1,16 +1,11 @@
-
-
 // Получить модальный
-
 var modalcallback = document.getElementById("modal-callback");
 // Получить кнопку, которая открывает модальный
-
-var btncallback = document.getElementById("button-callback");
-
+var btnOpen= document.getElementById("button-callback");
 // Получить элемент <span>, который закрывает модальный
-var sv = document.getElementsByClassName("modal__close")[0];
-
-var but = document.getElementById("contact");
+var madalclose = document.getElementsByClassName("modal__close")[0];
+// Кнопка свзаться
+var contactbutton = document.getElementById("contact");
 
 function clearInputs() {
 	var inputs = document.getElementsByTagName('input');
@@ -18,28 +13,20 @@ function clearInputs() {
 		inputs[i].value = '';
 	}
 }
-
-
-
 // Когда пользователь нажимает на кнопку, откройте модальный
-
-but.onclick = function () {
-	
-	clearInputs();
-}
-
-btncallback.onclick = function () {
+btnOpen.onclick = function () {
 	modalcallback.style.display = "block";
+}
+contactbutton.onclick = function () {
+	clearInputs();
 }
 // Когда пользователь нажимает на <span> (x), закройте модальное окно
 
-sv.onclick = function () {
+madalclose.onclick = function () {
 	modalcallback.style.display = "none";
 	clearInputs();
 }
-
 // Когда пользователь щелкает в любом месте за пределами модального, закройте его
-
 window.onclick = function (event) {
 	if (event.target == modalcallback) {
 		modalcallback.style.display = "none";
@@ -51,7 +38,7 @@ let tel = document.getElementById("tel-number");
 let comment = document.getElementById("comment");
 
 
-but.addEventListener('click', function () {
+contactbutton.addEventListener('click', function () {
 	let val = firstname.value;
 	let ad = tel.value;
 	if (val, ad) {
